@@ -90,6 +90,14 @@ const config = {
     prism: {
       theme: prismThemes.github,      // Light mode default
       darkTheme: prismThemes.dracula, // Dark mode default
+        okaidia: prismThemes.okaidia,
+        vsDark: prismThemes.vsDark,
+        duotoneLight: prismThemes.duotoneLight,
+        duotoneDark: prismThemes.duotoneDark,
+        nightOwl: prismThemes.nightOwl,
+        nightOwlLight: prismThemes.nightOwlLight,
+        shadesOfPurple: prismThemes.shadesOfPurple,
+        palenight: prismThemes.palenight,
       additionalThemes: {
         okaidia: prismThemes.okaidia,
         vsDark: prismThemes.vsDark,
