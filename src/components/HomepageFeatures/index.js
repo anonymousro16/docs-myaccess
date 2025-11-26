@@ -45,7 +45,7 @@ const FeatureList = [
   },
   {
     title: 'Expandable Modules',
-    Svg: require('@site/static/img/undraw_modular.svg').default, // replace with your SVG
+    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default, // replace with your SVG
     description: (
       <>
         MyAccess is modular: QR Login, Devices, Hub, and Games can be added or extended 
@@ -55,7 +55,7 @@ const FeatureList = [
   },
   {
     title: 'Future-Proof Platform',
-    Svg: require('@site/static/img/undraw_future.svg').default, // replace with your SVG
+    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default, // replace with your SVG
     description: (
       <>
         Designed to grow with your needs, MyAccess will integrate games, apps, and other 
