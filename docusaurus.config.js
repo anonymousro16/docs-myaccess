@@ -22,9 +22,10 @@ const config = {
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
 
+  // Internationalization (i18n) configuration
   i18n: {
     defaultLocale: 'en',
-    locales: ['en'],
+    locales: ['en', 'es', 'ro', 'ja'],
   },
 
   presets: [
