@@ -22,7 +22,7 @@ const config = {
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
 
-  // Internationalization (i18n) configuration
+  // Internationalization (i18n)
   i18n: {
     defaultLocale: 'en',
     locales: ['en', 'es', 'ro', 'ja'],
@@ -71,6 +71,8 @@ const config = {
           {type: 'docSidebar', sidebarId: 'tutorialSidebar', position: 'left', label: 'Documentation'},
           {to: '/blog', label: 'Updates', position: 'left'},
           {href: 'https://github.com/facebook/docusaurus', label: 'GitHub', position: 'right'},
+          // Locale dropdown added
+          {type: 'localeDropdown', position: 'right'},
         ],
       },
       footer: {
