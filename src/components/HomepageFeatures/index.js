@@ -4,32 +4,62 @@ import styles from './styles.module.css';
 
 const FeatureList = [
   {
-    title: 'Easy to Use',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    title: 'Unified User Profiles',
+    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default, // replace with your SVG
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        MyAccess gives each user a centralized profile to manage devices, track rewards, 
+        and connect to available modules in one secure place.
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    title: 'Digital Rewards',
+    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default, // replace with your SVG
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        Earn <code>currency_crystal</code> by activating modules, participating in events, 
+        or connecting games. Spend your crystals in our digital store or future services.
       </>
     ),
   },
   {
-    title: 'Powered by React',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    title: 'MyID Prototype',
+    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default, // replace with your SVG
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        Activate MyID to claim 500 initial <code>currency_crystal</code> and prepare for future 
+        game integrations and connected services.
+      </>
+    ),
+  },
+  {
+    title: 'Secure Sessions',
+    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default, // replace with your SVG
+    description: (
+      <>
+        Custom session management ensures your data is safe. Cookies and server-side checks 
+        protect your account at all times.
+      </>
+    ),
+  },
+  {
+    title: 'Expandable Modules',
+    Svg: require('@site/static/img/undraw_modular.svg').default, // replace with your SVG
+    description: (
+      <>
+        MyAccess is modular: QR Login, Devices, Hub, and Games can be added or extended 
+        without disrupting the platform.
+      </>
+    ),
+  },
+  {
+    title: 'Future-Proof Platform',
+    Svg: require('@site/static/img/undraw_future.svg').default, // replace with your SVG
+    description: (
+      <>
+        Designed to grow with your needs, MyAccess will integrate games, apps, and other 
+        digital services seamlessly.
       </>
     ),
   },
