@@ -2,7 +2,7 @@
 sidebar_position: 1
 ---
 
-# MyAccess
+# Introduction
 
 Welcome to **MyAccess**, a next-generation platform designed to manage digital identity, social engagement, and interactive experiences in a seamless and secure way. MyAccess is built on modern web technologies and provides a modular ecosystem for users, developers, and content providers.
 
