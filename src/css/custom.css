@@ -1,24 +1,36 @@
 /**
- * Any CSS included here will be global. The classic template
- * bundles Infima by default. Infima is a CSS framework designed to
- * work well for content-centric websites.
+ * Global CSS Overrides for Infima Framework
+ * -----------------------------------------
+ * This file customizes Infima's default theme variables for a
+ * professional, content-centric look. Includes primary colors,
+ * dark mode adjustments, and code styling enhancements.
  */
 
-/* You can override the default Infima variables here. */
+/* ===============================
+   Root Theme Variables (Light Mode)
+   =============================== */
 :root {
-  --ifm-color-primary: #2e8555;
-  --ifm-color-primary-dark: #29784c;
-  --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #33925d;
-  --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #3cad6e;
+  /* Primary Brand Colors */
+  --ifm-color-primary: #2e8555;          /* Main primary */
+  --ifm-color-primary-dark: #29784c;     /* Darker shade for hover/buttons */
+  --ifm-color-primary-darker: #277148;   /* Darker accents */
+  --ifm-color-primary-darkest: #205d3b;  /* Deep accents, borders, text */
+  --ifm-color-primary-light: #33925d;    /* Light variant for highlights */
+  --ifm-color-primary-lighter: #359962;  /* Secondary highlights */
+  --ifm-color-primary-lightest: #3cad6e; /* Tertiary highlights / subtle UI elements */
+
+  /* Code Styling */
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+
+  /* Optional: Adjust other Infima variables here */
 }
 
-/* For readability concerns, you should choose a lighter palette in dark mode. */
+/* ===============================
+   Dark Mode Theme Variables
+   =============================== */
 [data-theme='dark'] {
+  /* Primary Brand Colors */
   --ifm-color-primary: #25c2a0;
   --ifm-color-primary-dark: #21af90;
   --ifm-color-primary-darker: #1fa588;
@@ -26,5 +38,19 @@
   --ifm-color-primary-light: #29d5b0;
   --ifm-color-primary-lighter: #32d8b4;
   --ifm-color-primary-lightest: #4fddbf;
+
+  /* Code Styling */
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+
+  /* Optional: Adjust other Infima variables for dark mode here */
 }
+
+/* ===============================
+   Notes & Tips
+   =============================== */
+/* 
+  1. Use primary-dark for hover states and active buttons.
+  2. Use primary-lightest for subtle highlights or borders.
+  3. Adjust code font size for readability as needed.
+  4. Keep dark mode slightly brighter for accessibility.
+*/
