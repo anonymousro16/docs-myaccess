@@ -6,20 +6,18 @@ import {themes as prismThemes} from 'prism-react-renderer';
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'MyAccess',
-  tagline: 'Your Digital Identity & Rewards Hub',
+  tagline: 'Manage Your Digital Identity and Rewards',
   favicon: 'img/favicon.ico',
 
   future: {
     v4: true,
   },
 
-  // Production site URL
-  url: 'https://myaccess.example.com',
+  url: 'https://your-docusaurus-site.example.com',
   baseUrl: '/',
 
-  // GitHub pages deployment config
-  organizationName: 'myaccess-org',
-  projectName: 'myaccess-docs',
+  organizationName: 'facebook',
+  projectName: 'docusaurus',
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -37,7 +35,7 @@ const config = {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
           editUrl:
-            'https://github.com/myaccess-org/myaccess-docs/edit/main/',
+            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
         blog: {
           showReadingTime: true,
@@ -46,7 +44,7 @@ const config = {
             xslt: true,
           },
           editUrl:
-            'https://github.com/myaccess-org/myaccess-docs/edit/main/blog/',
+            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -58,7 +56,7 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-      image: 'img/myaccess-social-card.png',
+      image: 'img/docusaurus-social-card.jpg',
       colorMode: {
         respectPrefersColorScheme: true,
       },
@@ -69,35 +67,33 @@ const config = {
           src: 'img/logo.svg',
         },
         items: [
-          {type: 'docSidebar', sidebarId: 'tutorialSidebar', position: 'left', label: 'Docs'},
-          {to: '/blog', label: 'Blog', position: 'left'},
-          {href: 'https://github.com/myaccess-org/myaccess', label: 'GitHub', position: 'right'},
+          {type: 'docSidebar', sidebarId: 'tutorialSidebar', position: 'left', label: 'Documentation'},
+          {to: '/blog', label: 'Updates', position: 'left'},
+          {href: 'https://github.com/facebook/docusaurus', label: 'GitHub', position: 'right'},
         ],
       },
       footer: {
         style: 'dark',
         links: [
           {
-            title: 'Docs',
+            title: 'Documentation',
             items: [
               {label: 'Getting Started', to: '/docs/intro'},
-              {label: 'MyID Prototype', to: '/docs/myid'},
-              {label: 'Currency & Rewards', to: '/docs/currency'},
             ],
           },
-          /**{
+          {
             title: 'Community',
             items: [
-              {label: 'Discord', href: 'https://discord.gg/myaccess'},
-              {label: 'Stack Overflow', href: 'https://stackoverflow.com/questions/tagged/myaccess'},
-              {label: 'Twitter', href: 'https://twitter.com/myaccess'},
+              {label: 'Help & Support', href: 'https://stackoverflow.com/questions/tagged/docusaurus'},
+              {label: 'Chat', href: 'https://discordapp.com/invite/docusaurus'},
+              {label: 'Follow Us', href: 'https://x.com/docusaurus'},
             ],
-          },*/
+          },
           {
             title: 'More',
             items: [
-              {label: 'Blog', to: '/blog'},
-              {label: 'Login', href: 'https://myaccess.anonapp.qzz.io/login'},
+              {label: 'Updates', to: '/blog'},
+              {label: 'Source Code', href: 'https://github.com/facebook/docusaurus'},
             ],
           },
         ],
