@@ -1,7 +1,3 @@
-Sure! Here’s a revised version of the `register.md` file with more information and improved readability:
-
----
-
 # Create Account
 
 Welcome to **MyAccess**! Join us today to get started with your digital identity and unlock exclusive rewards.
@@ -69,4 +65,3 @@ Click the **Create Account** button to complete the registration process.
 
 ---
 
-This version includes more details and is structured to be easier to read.
