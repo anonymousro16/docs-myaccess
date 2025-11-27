@@ -12,8 +12,8 @@ const app = express();
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, '..', 'views'));
 
-// Load routes.yaml once at startup
-const routesFile = path.join(__dirname, '..', 'routes.yaml');
+// Load routes.yaml from the same folder
+const routesFile = path.join(__dirname, 'routes.yaml');
 const routesYaml = yaml.load(fs.readFileSync(routesFile, 'utf8'));
 
 // Serve Markdown dynamically based on routes.yaml
@@ -41,12 +41,15 @@ app.get('/*', (req, res) => {
   if (!fs.existsSync(filePath)) return res.status(404).send('Markdown file missing');
 
   const file = fs.readFileSync(filePath, 'utf8');
-  const { content } = matter(file);
+  const { content, data: frontmatter } = matter(file);
   const htmlContent = marked(content);
 
-  res.render('doc', { title: routePath === '/' ? 'Home' : routePath.slice(1), content: htmlContent });
+  res.render('doc', {
+    title: frontmatter.title || (routePath === '/' ? 'Home' : routePath.slice(1)),
+    content: htmlContent
+  });
 });
 
-// Export for Vercel
+// Export for Vercel serverless
 module.exports = app;
 module.exports.handler = serverless(app);

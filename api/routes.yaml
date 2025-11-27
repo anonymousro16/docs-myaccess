@@ -1,8 +1,13 @@
-# routes.yaml
+# api/routes.yaml
+
 default:
   "/": "homepage.md"
   "/example/test": "example/test.md"
+  "/about": "about.md"
+  "/contact": "contact.md"
 
 ro:
   "/": "homepage.md"
   "/example/test": "example/test.md"
+  "/about": "about.md"
+  "/contact": "contact.md"
