@@ -2,7 +2,7 @@
 
 ¡Bienvenido a **MyAccess**! Únete hoy mismo para empezar a usar tu identidad digital y desbloquear recompensas exclusivas.
 
-![Registrarse en MyAccess](img/register.png)
+![Registrarse en MyAccess](tutorial/img/register.png)
 
 ## Formulario de registro
 
