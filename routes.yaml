@@ -1,0 +1,7 @@
+default:
+  "/": "homepage.md"
+  "/example/test": "example/test.md"
+
+ro:
+  "/": "homepage.md"
+  "/example/test": "example/test.md"

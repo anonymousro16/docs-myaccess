@@ -3,20 +3,20 @@ const fs = require('fs');
 const path = require('path');
 const matter = require('gray-matter');
 const { marked } = require('marked');
-const serverless = require('serverless-http');
 const yaml = require('js-yaml');
 
 const app = express();
+const PORT = process.env.PORT || 3129;
 
 // Configure EJS
 app.set('view engine', 'ejs');
-app.set('views', path.join(__dirname, '..', 'views'));
+app.set('views', path.join(__dirname, 'views'));
 
-// Load routes.yaml from the same folder
+// Load routes.yaml
 const routesFile = path.join(__dirname, 'routes.yaml');
 const routesYaml = yaml.load(fs.readFileSync(routesFile, 'utf8'));
 
-// Serve Markdown dynamically based on routes.yaml
+// Serve Markdown dynamically
 app.get('/*', (req, res) => {
   let urlPath = req.path;
 
@@ -26,18 +26,18 @@ app.get('/*', (req, res) => {
   let routePath = urlPath;
 
   if (segments[0] === 'lang') {
-    lang = segments[1] || 'default';
+    lang = segments[0 + 1] || 'default';
     routePath = '/' + segments.slice(2).join('/');
     if (routePath === '/') routePath = '/';
   }
 
-  // Get mapped Markdown file from routes.yaml
+  // Get mapped Markdown file
   const langRoutes = routesYaml[lang] || {};
   const mdFileRelative = langRoutes[routePath];
 
   if (!mdFileRelative) return res.status(404).send('Page not found');
 
-  const filePath = path.join(__dirname, '..', 'docs', lang, mdFileRelative);
+  const filePath = path.join(__dirname, 'docs', lang, mdFileRelative);
   if (!fs.existsSync(filePath)) return res.status(404).send('Markdown file missing');
 
   const file = fs.readFileSync(filePath, 'utf8');
@@ -50,6 +50,6 @@ app.get('/*', (req, res) => {
   });
 });
 
-// Export for Vercel serverless
-module.exports = app;
-module.exports.handler = serverless(app);
+app.listen(PORT, () => {
+  console.log(`Server running at http://localhost:${PORT}`);
+});
